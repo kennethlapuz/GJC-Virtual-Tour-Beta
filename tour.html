@@ -20,51 +20,52 @@
 <body>
     
    <!-- Navigation -->
-   <nav class="navbar">
+<nav class="navbar">
     <div class="container">
         <div class="nav-content">
             <div class="logo-section">
-                <img src="images/GJC LOGO.png" alt="GJC Logo">
+                <a href="index.html">
+                    <img src="images/GJC LOGO.png" alt="College Logo" class="logo">
+                </a>
                 <div class="college-info">
-                    <div class="college-name">General De Jesus College</div>
+                    <a href="index.html" class="college-name">General de Jesus College</a>
                     <div class="college-address">Vallarta St., Poblacion, San Isidro, Nueva Ecija</div>
                 </div>
             </div>
-            
 
             <div class="nav-menu">
-                <div class="nav-links">
-                    
-                    <!-- About Us Dropdown -->
-                    <div class="dropdown">
-                        <span class="nav-link">About Us</span>
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">History</a>
-                            <a href="#" class="dropdown-item">Mission & Vision</a>
-                            <a href="#" class="dropdown-item">GJC Hymns</a>
-                        </div>
-                    </div>
 
-                    <!-- Contact Us Dropdown -->
-                    <div class="dropdown">
-                        <span class="nav-link">Contact Us</span>
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">Location</a>
-                            <a href="#" class="dropdown-item">Directory</a>
-                            <a href="#" class="dropdown-item">Send Message</a>
-                        </div>
+                <!-- Home Button -->
+                <a href="index.html" class="home-btn">
+                <i class="fas fa-home"></i> Home
+                </a>
+                
+                <!-- Dropdown Menu for Location Selection -->
+                <div class="custom-dropdown">
+                    <button class="dropdown-btn">
+                        <i class='fas fa-map-marker-alt'></i> Select a location
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="building1.html"><i class='fas fa-building'></i> Building 1</a>
+                        <a href="library.html"><i class='fas fa-book'></i> Library</a>
+                        <a href="gym.html"><i class='fas fa-dumbbell'></i> Gymnasium</a>
+                        <a href="lab.html"><i class='fas fa-laptop-code'></i> Computer Lab</a>
                     </div>
                 </div>
-
-                <!-- Search Bar -->
-                <form class="search-bar" action="search_results.html" method="GET">
-                    <input type="text" name="query" placeholder="Search..." required>
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    document.getElementById("locationDropdown").addEventListener("change", function() {
+        var selectedLocation = this.value;
+        if (selectedLocation) {
+            window.location.href = selectedLocation;
+        }
+    });
+</script>
+
 
     <!-- Panorama Viewer -->
     <div id="panorama"></div>
