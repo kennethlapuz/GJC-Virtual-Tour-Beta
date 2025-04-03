@@ -26,16 +26,50 @@ pannellum.viewer('panorama', {
         "showZoomCtrl": false  // ❌ This hides the zoom controls
     },
     "scenes": {
-        "scene1": {
+        "col-lib1": {
             "type": "equirectangular",
-            "panorama": "images/entrance-gate.jpg",
-            "hfov": 300, 
-            "yaw":3,  
-            "pitch":-10,// Adjust this value (default is 0)
+            "panorama": "5TA/col-lib1.jpg",
+            "hfov": 200, 
+            "yaw":0,  
+            "pitch":-5,// Adjust this value (default is 0)
             "hotSpots": [
                 {
                     "pitch": -35,  //pitch yung alignment ng hotspot vertical
-                    "yaw": -3,     //yaw alignment ng hotspot horizontal
+                    "yaw": 0,     //yaw alignment ng hotspot horizontal
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Go Forward",
+                    "sceneId": "col-lib2"
+                }
+            ]
+        },
+        "col-lib2": {
+            "type": "equirectangular",
+            "panorama": "5TA/col-lib1.jpg",
+            "hfov": 200, 
+            "yaw":0,  
+            "pitch":-5,// Adjust this value (default is 0)
+            "hotSpots": [
+                {
+                    "pitch": -35,  //pitch yung alignment ng hotspot vertical
+                    "yaw": -5,     //yaw alignment ng hotspot horizontal
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Go Forward",
+                    "sceneId": "col-lib1"
+                }
+            ]
+        },
+        "scene1": {
+            "type": "equirectangular",
+            "panorama": "1 Main Entrance/1.1.jpg",
+            "hfov": 300, 
+            "yaw":-5,  
+            "pitch":-5,// Adjust this value (default is 0)
+            "hotSpots": [
+                {
+                    "pitch": -35,  //pitch yung alignment ng hotspot vertical
+                    "yaw": -5,     //yaw alignment ng hotspot horizontal
                     "type": "custom",
                     "createTooltipFunc": groundHotspot,
                     "text": "Go Forward",
@@ -45,9 +79,10 @@ pannellum.viewer('panorama', {
         },
         "scene2": {
             "type": "equirectangular",
-            "panorama": "images/facade.jpg",
-            "hfov": 110,
-            "pitch":-10,
+            "panorama": "1 Main Entrance/2.jpg",
+            "hfov": 200,
+            "pitch":-5,
+            "yaw": 3,
             "hotSpots": [
                 {
                     "pitch": -30,
@@ -56,6 +91,47 @@ pannellum.viewer('panorama', {
                     "createTooltipFunc": groundHotspot,
                     "text": "Go Back",
                     "sceneId": "scene1"
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 3,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Go Back",
+                    "sceneId": "scene2.1"
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -70,  // Left side
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Go Left to Facade Left",
+                    "sceneId": "scene3"
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 96,  // Right side
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Go Right to Facade Right",
+                    "sceneId": "scene4"
+                }
+            ]
+        },
+        "scene2.1": {
+            "type": "equirectangular",
+            "panorama": "1 Main Entrance/2.1.jpg",
+            "hfov": 200,
+            "pitch":-5,
+            "yaw": -5,
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 180,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Go Back",
+                    "sceneId": "scene2"
                 },
                 {
                     "pitch": -30,
@@ -78,9 +154,9 @@ pannellum.viewer('panorama', {
         ,
         "scene3": {
             "type": "equirectangular",
-            "panorama": "images/facade-left.jpg",
+            "panorama": "1 Main Entrance/3.jpg",
             "hfov": 200,
-            "yaw": -90,  // kung gusto mong iposition kung san yung center ng panorama  
+            "yaw": 180,  // kung gusto mong iposition kung san yung center ng panorama  
             "hotSpots": [
                 {
                     "pitch": -45,
@@ -102,13 +178,63 @@ pannellum.viewer('panorama', {
         },
         "scene4": {
             "type": "equirectangular",
-            "panorama": "3 main entrance/2.jpg",
+            "panorama": "1 Main Entrance/4.jpg",
             "hfov": 200,
-            "yaw": 150,  // Adjust this value (default is 0) 
+            "yaw": 100,  // Adjust this value (default is 0) 
             "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -83,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Move Forward",
+                    "sceneId": "scene2"
+                },
                 {
                     "pitch": -30,
                     "yaw": 83,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Move Forward",
+                    "sceneId": "scene2"
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 0,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Move Forward",
+                    "sceneId": "scene4.1"
+                }
+                
+            ]
+        },
+        "scene4.1": {
+            "type": "equirectangular",
+            "panorama": "1 Main Entrance/4.1.jpg",
+            "hfov": 200,
+            "pitch": 20,
+            "yaw": 0,  // Adjust this value (default is 0) 
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": -83,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Move Forward",
+                    "sceneId": "scene2.1"
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 83,
+                    "type": "custom",
+                    "createTooltipFunc": groundHotspot,
+                    "text": "Move Forward",
+                    "sceneId": "scene2"
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 0,
                     "type": "custom",
                     "createTooltipFunc": groundHotspot,
                     "text": "Move Forward",
@@ -116,11 +242,11 @@ pannellum.viewer('panorama', {
                 },
                 {
                     "pitch": -30,
-                    "yaw": -40,
+                    "yaw": 180,
                     "type": "custom",
                     "createTooltipFunc": groundHotspot,
                     "text": "Move Forward",
-                    "sceneId": "scene2"
+                    "sceneId": "scene4"
                 }
                 
             ]
@@ -146,7 +272,7 @@ pannellum.viewer('panorama', {
                     "type": "custom",
                     "createTooltipFunc": groundHotspot,
                     "text": "Move Back",
-                    "sceneId": "scene4"
+                    "sceneId": "scene4.1"
                 },
                 {
                     "pitch": -35,
@@ -2372,3 +2498,4 @@ pannellum.viewer('panorama', {
     }
       
 });
+
