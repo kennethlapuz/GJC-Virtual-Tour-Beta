@@ -7,19 +7,6 @@ const locations = {
     //dito sa part nato ilalagay mo yung mga scene na nagawa mo, yung name ng scene tapos yung mismong scene
 };
 
-document.querySelector(".search-bar").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent page reload
-
-    let searchQuery = document.querySelector(".search-bar input").value.trim();
-
-    if (locations[searchQuery]) {
-        viewer.loadScene(locations[searchQuery]); // Load the scene if found
-    } else {
-        alert("Location not found!");
-    }
-});
-
-
 // Function to create a custom ground hotspot (Google Street View style)
 function groundHotspot(hotSpotDiv, args) {
     hotSpotDiv.classList.add("ground-hotspot"); // Apply CSS class
