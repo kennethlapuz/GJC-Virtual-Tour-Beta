@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Navigation Trial </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  
+
+<body>
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-custom-navbar">
+    <div class="container d-flex">
+        <!-- Logo Section (Left Side) -->
+        <div class="d-flex align-items-center">
+            <img src="/for navbar/Picture Asstes/GJC LOGO.png" alt="GJC Logo" style="height: 50px; margin-right: 10px;">
+            <div>
+                <div class="text-white fw-bold">General De Jesus College</div>
+                <div class="text-white">Vallarta St., Poblacion, San Isidro, Nueva Ecija</div>
+            </div>
+        </div>
+
+        <!-- Normal Navbar for Large Screens (Right-Aligned) -->
+        <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+            <ul class="navbar-nav">
+                <!-- About Us Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       ABOUT US
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/History-of-GJC.html">History</a></li>
+                        <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/MissionVission.html">Philosophy, Vision, Mission, & Values</a></li>
+                        <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/GJC-HYMN.html">GJC Hymn</a></li>
+                        <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/GJC-MARCH.html">GJC March</a></li>
+                        <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/DITO-SA-GJC.html">GJC Promotional Video</a></li>
+                    </ul>
+                </li>
+
+                <!-- Contact Us Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      CONTACT US
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                        <li><a class="dropdown-item" href="/Scratch for Nav bar/for navbar/CONTACT-US.html">Contact Information</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+
+        <!-- Navbar Toggler (Hamburger Menu for Small Screens) -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+    
+ <!-- Offcanvas Sidebar Menu (Only Visible on Small Screens) -->
+<div class="offcanvas offcanvas-end custom-offcanvas d-lg-none" id="offcanvasNavbar" tabindex="-1">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <!-- About Us Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="aboutDropdownOffcanvas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    ABOUT US
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="aboutDropdownOffcanvas">
+                    <li><a class="dropdown-item" href="#">Board of Directors</a></li>
+                    <li><a class="dropdown-item" href="/for navbar/HISTORY.html">History</a></li>
+                    <li><a class="dropdown-item" href="/for navbar/MissionVission.html">Mission & Vision</a></li>
+                    <li><a class="dropdown-item" href="/for navbar/GJC-MARCH.html">GJC Hymns</a></li>
+                </ul>
+            </li>
+
+            <!-- Contact Us Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="contactDropdownOffcanvas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    CONTACT US
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="contactDropdownOffcanvas">
+                    <li><a class="dropdown-item" href="#contact-form">Contact Form</a></li>
+                    <li><a class="dropdown-item" href="#address">Our Address</a></li>
+                    <li><a class="dropdown-item" href="#phone">Phone Numbers</a></li>
+                    <li><a class="dropdown-item" href="#email">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    
+
+
+
+
+
+
+                        <!-- Contact Form                        <form class="search-bar d-flex align-items-center" action="search_results.html" method="GET" style="background: white; border-radius: 25px; padding: 5px 15px;">
+                            <button style="border: none; background: none; font-weight: bold; margin-right: 10px;">Contact Us</button>
+                            <i><box-icon type='logo' name='facebook-circle' size="25px"></box-icon></i>
+                            <i><box-icon name='envelope' size="25px" style="margin-left: 8px;"></box-icon></i>
+                            <i><box-icon name='search-alt-2' size="25px" style="margin-left: 8px;"></box-icon></i>
+                        </form>
+                    </li>-->
+
+    <!-- load javascript after loading all html content -->
+    
+    <!-- Bootstrap JS (Required for Dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.querySelectorAll(".nav-item.dropdown");
+        dropdowns.forEach(function (dropdown) {
+            dropdown.addEventListener("mouseenter", function () {
+                let menu = this.querySelector(".dropdown-menu");
+                menu.classList.add("show");
+            });
+            dropdown.addEventListener("mouseleave", function () {
+                let menu = this.querySelector(".dropdown-menu");
+                menu.classList.remove("show");
+            });
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>
