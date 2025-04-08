@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy, Vision, Mission, & Values</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #dbfdda;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2a7d2d;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 50px;
+        }
+
+        div p {
+            color: #000000;
+            font-size: 1.3rem;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #294e287c; /* Dark green background*/
+        }
+
+        .section img {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+            width: 40%;
+            border-radius: 10px;
+        }
+
+        .text-content {
+            width: 60%;
+            padding: 20px;
+        }
+
+        /* Reverse layout for alternating sections */
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .nav-item {
+            margin-right: 50px; /* Adjust this value as needed */
+        }
+
+        /* Optional: Adjust the padding of the nav items for better alignment */
+        .nav-item a {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+        }
+
+        /* Adjust the dropdown spacing */
+        .nav-item.dropdown .dropdown-menu {
+            margin-top: 0; /* Adjust dropdown positioning */
+        }
+
+        /* For responsive behavior on smaller screens */
+        @media (max-width: 991px) {
+            .nav-item {
+                margin-right: 10px; /* Reduce space on smaller screens */
+            }
+        }
+
+        .dropdown-menu {
+            background-color: #294e28; /* color ng drop down sa nav bar kapag big screen */
+            opacity: .8;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        .dropdown-item {
+            color: white !important;
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #294E28; /* Light gray on hover */
+            color: #031a09!important; /* Custom hover text color */
+            text-decoration: none;
+        }
+
+        /* Remove dropdown arrow */
+        .navbar-nav .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom Background for Offcanvas Menu */
+        .bg-custom-offcanvas {
+            background-color: #031A09!important; /* Ensure color is applied */
+            opacity: 1;
+        }
+
+        /* Ensure text is visible against custom background */
+        .bg-custom-navbar .nav-link,
+        .bg-custom-offcanvas .nav-link {
+            color: white !important;
+        }
+
+        .bg-custom-navbar .nav-link:hover,
+        .bg-custom-offcanvas .nav-link:hover {
+            color: #316c40 !important; /* Change hover effect color */
+            text-decoration: none;
+        }
+
+        /* Customize the offcanvas menu size */
+        .custom-offcanvas {
+            width: 300px !important; /* Adjust width */
+            height: 100vh !important; /* Make it full height */
+            background-color: #031A09 !important; /* Customize background color */
+            display: flex;
+        }
+
+        /* Style the text inside the menu */
+        .custom-offcanvas .offcanvas-title {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .custom-offcanvas .nav-link {
+            font-size: 18px;
+            color: white !important;
+            padding: 10px;
+        }
+
+        .custom-offcanvas .nav-link:hover {
+            color: #e2f87b !important; /* Hover effect */
+            text-decoration: none;
+        }
+
+        /* Navigation styles */
+        .navbar {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px; /* Adjust as needed */
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 11vh;
+            background: linear-gradient(to right,#031A09, #294E28, #e8d90c);
+            padding: 0.5rem;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+
+        .container {
+            max-width: 100vw;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-section img {
+            height: 60px;
+            margin-right: 1px;
+        }
+
+        .college-info {
+            color: white;
+        }
+
+        .college-name {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px; /* Adjust as needed */
+            font-weight: 600;
+        }
+
+        .college-address {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12px; /* Adjust as needed */
+            opacity: 0.8;
+        }
+
+        /* Navigation menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: #fde047;
+            text-decoration: none;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-radius: 0.375rem;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-item {
+            padding: 0.75rem 1rem;
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f3f4f6;
+            text-decoration: none;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: #015C15;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2a7d2d;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #006400; 
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        footer img {
+            width: 50px; 
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .navbar-nav .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            h1, h3, h4, p {
+                margin-left: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            footer {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-custom-navbar">
+        <div class="container d-flex">
+            <!-- Logo Section (Left Side) -->
+            <div class="d-flex align-items-center">
+                <img src="Picture Assets/GJC LOGO.png" alt="GJC Logo" style="height: 50px; margin-right: 10px;">
+                <div>
+                    <div class="text-white fw-bold">General De Jesus College</div>
+                    <div class="text-white">Vallarta St., Poblacion, San Isidro, Nueva Ecija</div>
+                </div>
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-uppercase" href="/PANNELLUM/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/History-of-GJC.html">History</a></li>
+                            <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/MissionVission.html">Philosophy, Vision, Mission, & Values</a></li>
+                            <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/GJC-HYMN.html">GJC Hymn</a></li>
+                            <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/GJC-MARCH.html">GJC March</a></li>
+                            <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/DITO-SA-GJC.html">GJC Promotional Video</a></li>
+                        </ul>
+                    </li>
+
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CONTACT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                            <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/CONTACT-US.html">Contact Information</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Navbar Toggler (Hamburger Menu for Small Screens) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar Menu (Only Visible on Small Screens) -->
+    <div class="offcanvas offcanvas-end custom-offcanvas d-lg-none" id="offcanvasNavbar" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/PANNELLUM/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                    <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/History-of-GJC.html">History</a></li>
+                    <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/MissionVission.html">Philosophy, Vision, Mission, & Values</a></li>
+                    <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/GJC-HYMN.html">GJC Hymn</a></li>
+                    <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/GJC-MARCH.html">GJC March</a></li>
+                    <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/DITO-SA-GJC.html">GJC Promotional Video</a></li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT US</a>
+                    <li><a class="dropdown-item" href="/PANNELLUM/Scratch for Nav bar/for navbar/CONTACT-US.html">Contact Information</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>Philosophy, Vision, Mission, & Values</h1>
+
+    <!-- Philosophy Section -->
+    <div class="section">
+        <img src="/PANNELLUM/Scratch for Nav bar/for navbar/Picture Assets/philosophy.jpeg" alt="Philosophy Image">
+        <div class="text-content">
+            <h2>Philosophy</h2>
+            <p>The development of a morally upright, civic-minded, and useful citizenry is the 
+                responsibility of any educational institution.</p>
+        </div>
+    </div>
+
+    <!-- Vision Section -->
+    <div class="section reverse">
+        <img src="/PANNELLUM/Scratch for Nav bar/for navbar/Picture Assets/vision.jpeg" alt="Vision Image">
+        <div class="text-content">
+            <h2>Vision</h2>
+            <p>General de Jesus College as a leading quality educational institution in Central Luzon 
+                producing graduates imbued with discipline, integrity, and excellence that may contribute 
+                to local, national, and global development goals.</p>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="section">
+        <img src="/PANNELLUM/Scratch for Nav bar/for navbar/Picture Assets/mission.jpeg" alt="Mission Image">
+        <div class="text-content">
+            <h2>Mission</h2>
+            <p>General De Jesus College is committed to producing graduates who are instilled with life and 
+                career competencies and essential values that they may become useful and productive citizens.</p>
+        </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="section reverse">
+        <img src="/PANNELLUM/Scratch for Nav bar/for navbar/Picture Assets/values.jpeg" alt="Values Image">
+        <div class="text-content">
+            <h2>Values</h2>
+            <p>Discipline - Integrity - Excellence <br>
+               For God and Country</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer>
+    <img src="/PANNELLUM/Scratch for Nav bar/for navbar/Picture Assets/GJC LOGO.png" alt="Logo">
+    <p>&copy; 2025 General de Jesus College. All rights reserved.</p>
+  </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
